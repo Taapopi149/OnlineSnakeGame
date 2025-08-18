@@ -1,5 +1,5 @@
-import Welcome from '../Components/Welcome/Welcome.jsx'
-import Frame from '../Components/SnakeGame/Frame.jsx'
+import Welcome from '../../Components/Welcome/Welcome.jsx'
+import Frame from '../../Components/SnakeGame/Frame.jsx'
 
 export const ROUTES = [
     {
