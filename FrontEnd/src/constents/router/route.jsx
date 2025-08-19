@@ -4,7 +4,7 @@ import Frame from '../../Components/SnakeGame/Frame.jsx'
 export const ROUTES = [
     {
         path: '/',
-        element: <Welcome/>
+        element: <Welcome onSubmitName={(name) =>console.log("Name Submitted")}/>
     }, {
         
         path: '/game',
