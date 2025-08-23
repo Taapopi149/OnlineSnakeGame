@@ -1,0 +1,54 @@
+.container {
+    background:#1e1e1e;  
+    padding: 30px 40px; 
+    border-radius: 18px;
+    text-align: center;
+    max-width: 400px; 
+      width: 90%;                  /* responsive */
+  animation: popIn 0.3s ease-out; /* smooth entrance */     
+}
+
+.Restart, .Exit {
+  background: #4deaff;
+  border: none;
+  border-radius: 8px;
+  color: rgb(5, 4, 4);
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.container h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #ff4d4d;              /* standout red title */
+}
+
+.container p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.Exit:hover {
+  background: #ff1a1a;
+}
+
+.Exit {
+  background: #555;
+}
+
+.Restart:hover {
+  background: #32af3d;
+}
+
+/* Animation for pop-in effect */
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

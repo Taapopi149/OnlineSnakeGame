@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 
 import './Frame.css'
-import GameLogic from '../GameOver/GameLogic'
-import GameOver from '../GameLogic/GameOver'
+import GameLogic from '../GameLogic/GameLogic'
+import GameOver from '../GameOver/GameOver'
 
 const Frame = () => {
 
