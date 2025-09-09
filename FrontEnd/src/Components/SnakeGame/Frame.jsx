@@ -1,11 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 
 import './Frame.css'
 import GameLogic from '../GameLogic/GameLogic'
 import GameOver from '../GameOver/GameOver'
+import Leaderboard from '../Leaderboard/leaderboard.jsx'
 
 const Frame = () => {
+
+  const canvasRef = useRef(null)
+  const canvasWidth = 300
+  const canvasHeight = 200
+
 
   const [gameOver, setGameOver] = useState(false);
   const [finalScore, setFinalScore] = useState(0);
@@ -31,6 +37,7 @@ const Frame = () => {
       <div className="Game-Area">
         <h2>Snake Game</h2>
         {!gameOver && <GameLogic key={gameKey} onGameOver={HandleGameOver}/>}
+        
         {gameOver && (
           <GameOver
           score={finalScore}
@@ -43,8 +50,15 @@ const Frame = () => {
 
       <div className="Leaderboard-Container">
         <h2>Leaderboard</h2>
+        { <Leaderboard/>}
         <div className="CurrentScore-Area">
           <h2>Player Name</h2>
+          <canvas 
+         ref={canvasRef}
+         width={canvasWidth}
+         height={canvasHeight}
+         style={{border: "2px solid white", marginTop: "20px"}}
+          />
         </div>
       </div>
     </div>
