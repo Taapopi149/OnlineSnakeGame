@@ -12,7 +12,6 @@ const Frame = () => {
   const canvasWidth = 300
   const canvasHeight = 200
 
-
   const [gameOver, setGameOver] = useState(false);
   const [finalScore, setFinalScore] = useState(0);
    const [gameKey, setGameKey] = useState(0); // key to reset game
